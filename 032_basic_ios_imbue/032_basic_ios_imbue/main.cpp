@@ -9,9 +9,9 @@ int main()
     std::wcout.imbue(loc);
     std::wcout << L"测试中文输出" << std::endl;
 
+    std::cout << "Current locale: " << std::wcout.getloc().name() << '\n';
     std::wcout.imbue(std::locale());
-    std::wcout << L"没" << std::endl;
-    std::wcout << L"abc" << std::endl;
+    std::cout << "Global locale: " << std::cout.getloc().name() << '\n';
 
     return 0;
 }
